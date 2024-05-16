@@ -1,5 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { MarcasModule } from './module/marcas/marcas.module';
+import { MarcasService } from './module/marcas/marcas.service';
 
 @Module({
   imports: [
@@ -13,6 +15,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    MarcasModule,
   ],
 })
 export class AppModule {}
